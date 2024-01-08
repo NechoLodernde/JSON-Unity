@@ -151,6 +151,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2052799428}
+  - {fileID: 795527417}
   m_Father: {fileID: 339952504}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -196,6 +197,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90731524}
   m_CullTransparentMesh: 1
+--- !u!1 &179137774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179137776}
+  - component: {fileID: 179137775}
+  m_Layer: 0
+  m_Name: TestingServer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &179137775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179137774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e744f049a0117c408cae71c94d4f477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &179137776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179137774}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310687660
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +347,7 @@ GameObject:
   - component: {fileID: 339952503}
   - component: {fileID: 339952502}
   - component: {fileID: 339952501}
+  - component: {fileID: 339952505}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -394,6 +440,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &339952505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339952500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996534a7816e97344bbe0328536f4e24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &648730425
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +599,7 @@ GameObject:
   - component: {fileID: 795527419}
   - component: {fileID: 795527418}
   m_Layer: 5
-  m_Name: SaveButton
+  m_Name: LoadButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,19 +612,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795527416}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1176284008}
-  m_Father: {fileID: 2052799428}
+  m_Father: {fileID: 90731525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -45}
+  m_SizeDelta: {x: 200, y: 45}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &795527418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,18 +671,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1841739373}
         m_TargetAssemblyTypeName: SaveData, Assembly-CSharp
-        m_MethodName: SaveIntoJSON
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1841739373}
-        m_TargetAssemblyTypeName: SaveData, Assembly-CSharp
         m_MethodName: ReadFromJSON
         m_Mode: 1
         m_Arguments:
@@ -648,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21039516, g: 0.5660378, b: 0.24569051, a: 1}
+  m_Color: {r: 0.21176468, g: 0.5647059, b: 0.5165686, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -730,7 +776,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Save
+  m_text: Load
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -964,7 +1010,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1777738006}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 339952505}
+        m_TargetAssemblyTypeName: TestingUIHandler, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1777738006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1032,10 +1090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4a8ed66a377e141a1eb26dc148f2fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _PotionData:
-    potion_name: 
-    value: 0
-    effect: []
+  potList:
+    list: []
   test_ui: {fileID: 2052799429}
 --- !u!4 &1841739374
 Transform:
@@ -1149,8 +1205,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 795527417}
+  m_Children: []
   m_Father: {fileID: 90731525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1356,3 +1411,4 @@ SceneRoots:
   - {fileID: 339952504}
   - {fileID: 1998876619}
   - {fileID: 1841739374}
+  - {fileID: 179137776}
